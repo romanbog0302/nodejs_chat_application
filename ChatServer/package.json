@@ -1,0 +1,21 @@
+{
+    "name": "ChatServer",
+    "description": "",
+    "version": "0.0.1",
+    "main": "./ChatServer.js",
+    "author": {
+        "name": "ankitved",
+        "email": "ved-pc@ved"
+    },
+    "keywords": [],
+    "licenses": {
+        "type": "none"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/YOUR_LOGIN/ChatServer.git"
+    },
+    "bugs": {
+        "url": "http://github.com/YOUR_LOGIN/ChatServer/issues"
+    }
+}

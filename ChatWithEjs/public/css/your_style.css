@@ -1,0 +1,478 @@
+/*
+ * It is advised not to edit the smartadmin_production.css
+ * as this will override any changes you make in the
+ * later versions of this theme.
+ *
+ * We advise that you use use this CSS to override
+ * SmartAdmin styles.
+ *
+ * Rename the stylesheet to whatever your liking so it will stay
+ * unique to you with each update of SmartAdmin.
+ */
+
+/*
+ * INDEX
+ *
+ * - HTML
+ * - BODY
+ * - CUSTOM STYLES
+ */
+
+
+/*
+.chat li:nth-child(odd) {
+    text-align: right;
+}
+
+*/
+.chat
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+span.online{
+    border: 2px solid #356e35;
+    margin-right: 10px;
+}
+.img-circle{
+    width: 40px;height: 40px
+}
+
+.avatar.img-circle{
+    width: 100px;height: 100px
+}
+.chat-action{
+    margin-left: 5px;
+    cursor: pointer;
+}
+.chat li
+{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    /*border-bottom: 1px dotted #B3A9A9;*/
+}
+
+.chat li.left .chat-body
+{
+    margin-left: 60px;
+}
+
+.chat li.right .chat-body
+{
+    margin-right: 60px;
+}
+
+
+.chat li .chat-body p
+{
+    margin: 0;
+    color: #777777;
+}
+
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+    margin-right: 5px;
+}
+
+
+.chatWindow  .panel-body
+{
+    overflow-y: scroll;
+    height: 600px;
+}
+
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+
+.sender-circle{
+    border-radius: 50%;
+    font-weight: bold;
+    height: 50px;
+    padding: 16px;
+    position: relative;
+    top: 5px;
+    width: 50px;
+}
+.user-me{
+    background-color: #fd856a;
+}
+
+.user-end{
+    background-color: #64CCEC;
+}
+/*---------------------*/
+.error{
+    color: red; 
+    font-size: 12;
+}
+
+.chatWindow-open{
+    display: block;
+}
+
+.chatWindow-close{
+    display: none;
+}
+
+.clearfix.right{
+    padding: 10px;
+    /*margin-left: 60px;*/
+}
+
+.clearfix.left{
+    padding: 10px;
+    /*margin-right: 60px;*/
+}
+.unread-msg{
+    background-color: lightyellow;
+}
+
+.head-circle{
+    height: 80px; width: 80px; background-color: rgb(50, 118, 177); border-radius: 50%; font-size: 30px; padding: 19px; text-align: center; color: rgb(255, 255, 255); text-transform: uppercase;
+}
+
+.login-user-img{
+    height: 40px;
+    margin-bottom: -10px;
+    margin-top: -10px;
+    width: 40px;
+    border-radius: 50%; 
+}
+
+/*----------------Login CSS--------------------*/
+.card-container.card {
+    max-width: 350px;
+    padding: 40px 40px;
+}
+
+/*
+.btn {
+    font-weight: 700;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+*/
+/*
+ * Card component
+ */
+.card {
+    background-color: #F7F7F7;
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img-card {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+/*
+ * Form styles
+ */
+.profile-name-card {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 0;
+    min-height: 1em;
+}
+
+.reauth-email {
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin #inputEmail,
+.form-signin #inputPassword {
+    direction: ltr;
+    height: 44px;
+    font-size: 16px;
+}
+
+.form-signin input[type=email],
+.form-signin input[type=password],
+.form-signin input[type=text],
+.form-signin button {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+    border-color: rgb(104, 145, 162);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+}
+
+.btn.btn-signin {
+    /*background-color: #4d90fe; */
+    /* background-color: rgb(104, 145, 162);*/
+    /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+    padding: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+}
+
+.btn.btn-signin:hover,
+.btn.btn-signin:active,
+.btn.btn-signin:focus {
+    background-color: rgb(12, 97, 33);
+}
+
+.forgot-password {
+    color: rgb(104, 145, 162);
+}
+
+.forgot-password:hover,
+.forgot-password:active,
+.forgot-password:focus{
+    color: rgb(12, 97, 33);
+}
+
+/*-----------Sign up--------------*/
+
+.centered-form{
+    margin-top: 60px;
+}
+
+.centered-form .panel{
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+
+.signup input{
+    direction: ltr;
+    font-size: 16px;
+    height: 44px;
+}
+
+#onlineUser a{
+    white-space:nowrap;text-overflow: ellipsis; overflow: hidden;  
+}
+
+.css-emoticon{
+    font-size: 20px !important;
+    margin: 5px;
+}
+
+#emotionList span{
+    cursor: pointer;
+}
+
+.dropup:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* remove the gap so it doesn't close*/
+}
+.chat-list-img{
+    max-width: 80px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.image-popup-back{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+}
+
+.image-popup-back img{
+    /*
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    */
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 620px
+}
+
+
+.spinner {
+    height: 28px;
+    width: 28px;
+    animation: rotate 0.8s infinite linear;
+    border: solid #FB9774;
+    border-right-color: transparent;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+.loader-sipnner {
+    height: 28px;
+    animation: rotate 0.8s infinite linear;
+    border: solid #FB9774;
+    border-right-color: transparent;
+    border-radius: 50%
+}
+
+@keyframes rotate { 
+    0%{	transform: rotate(0deg)}
+    100%{transform:rotate(360deg)}
+}
+.loader-container {
+    height: 28px;
+    width: 100%;
+    z-index: 1111;
+    position: relative;
+}
+
+
+.loader-content {
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px
+}
+
+#loader{
+    background-color: sandybrown;
+    bottom: auto;
+    display: none;
+    left: 50%;
+    padding: 10px 60px;
+    position: absolute;
+    right: auto;
+    top: 50%;
+    z-index: 1100;
+}
+
+.selected-msg{
+    background-color: rgba(253, 42, 4, 0.15);
+}
+
+.acton-btn{
+    display: none;
+}
+button.btn.btn-warning.btn-circle.btn-lg.btn-chat {
+    border-radius: 100%;
+}
+li.left p {
+    background-color: #f1effd;
+    padding: 10px;
+    border-radius: 4px;
+}
+li.right p {
+    background-color: #e8fdeb;
+    padding: 10px;
+    border-radius: 4px;
+}
+/*p.pull-left:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -13px;
+    right: auto;
+    top: 0;
+    bottom: auto;
+    border: 7px solid;
+    border-color: #f1effd #f1effd transparent transparent;
+}*/
+/*.text-right:before{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -13px;
+    right: auto;
+    top: 0;
+    bottom: auto;
+    border: 7px solid;
+    border-color: #f1effd #f1effd transparent transparent;
+}
+li.right p:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    right: 57px;
+    top: 27px;
+    bottom: auto;
+    border: 7px solid;
+    border-color: #e8fdeb transparent transparent #e8fdeb;
+}*/
+li.clearfix.left{
+    position: relative;
+}
+li.clearfix.right{
+    position: relative;
+}
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    z-index: 2;
+    color: #fff;
+    background-color: rgb(252, 94, 86);
+    border-color: rgb(252, 94, 86);
+}
+.btn-warning {
+    color: #fff;
+    background-color: #fc5e56;
+    border-color: #fc5e56;
+}

@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+    <head>
+        <title>My Chat</title>
+        <%include ../partials/head %>
+
+    </head>
+    <body>
+        <%include ../partials/login_header %>
+
+        <div class="container">
+            <h1>Edit Profile</h1>
+            <hr>
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-3">
+                    <div class="text-center">
+                        <!-- <img src="//placehold.it/100" class="avatar img-circle" alt="avatar"> -->
+                        <img id="avtar" src="<%=user.profileImage%>" class="avatar img-circle" alt="avatar" style="cursor: pointer">
+                        <h6>Click on profile image to change</h6>
+                        <form method="post"  action="user/changeProfileImage" enctype="multipart/form-data" >
+                            <input id="avtarFile" type="file" name="image" style="left: -600px;position: absolute">
+                            <input class="btn btn-warning" type="submit" value="Save">
+                        </form>
+                    </div>
+                </div>
+
+                <!-- edit form column -->
+                <div class="col-md-9 personal-info">
+                    <!--
+                    <div class="alert alert-info alert-dismissable">
+                        <a class="panel-close close" data-dismiss="alert">×</a> 
+                        <i class="fa fa-coffee"></i>
+                        This is an <strong>.alert</strong>. Use this to show important messages to the user.
+                    </div>
+                    -->
+                    <h3>Personal info</h3>
+
+                    <form id="updateProfile" class="form-horizontal" role="form" action="user/changepassword" method="POST">
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">First name:</label>
+                            <div class="col-lg-8">
+                                <div>
+                                    <input id="fName" name="fName" class="form-control" type="text" value="<%=user.firstName%>">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Last name:</label>
+                            <div class="col-lg-8">
+                                <div>
+                                    <input id="lName" name="lName" class="form-control" type="text" value="<%=user.lastName%>">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Email:</label>
+                            <div class="col-lg-8">
+                                <div>
+                                    <div class="form-control" > <%=user.email%> </div>
+                                    <input id="email" name="email" class="form-control" type="hidden" value="<%=user.email%>">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Current Password:</label>
+                            <div class="col-md-8">
+                                <div>
+                                    <input id="curentPwd" name="curentPwd" class="form-control" type="password">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">New Password:</label>
+                            <div class="col-md-8">
+                                <div>
+                                    <input id="newPwd" name="newPwd" class="form-control" type="password" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Confirm password:</label>
+                            <div class="col-md-8">
+                                <div>
+                                    <input id="cunformPwd" name="cunformPwd" class="form-control" type="password" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label"></label>
+                            <div class="col-md-8">
+                                <button class="btn btn-warning" type="submit">Save Changes</button>
+                                <span></span>
+                                <input type="reset" class="btn btn-default" value="Cancel">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <%include ../partials/logInFooter %>
+
+        <script src="js/plugin/validation/jquery.validate.min.js" type="text/javascript"></script>
+        <script src="js/plugin/validation/additional-methods.min.js" type="text/javascript"></script>
+
+        <script src="custom-js/profile.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function () {
+                $('[data-toggle="tooltip"]').tooltip();
+
+                $("#avtar").click(function () {
+                    $("#avtarFile").trigger('click');
+                });
+
+                function readURL(input) {
+
+                    if (input.files && input.files[0]) {
+                        var reader = new FileReader();
+
+                        reader.onload = function (e) {
+                            $('#avtar').attr('src', e.target.result);
+                        }
+
+                        reader.readAsDataURL(input.files[0]);
+                    }
+                }
+
+                $("#avtarFile").change(function () {
+                    readURL(this);
+                });
+            });
+        </script>
+
+
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<nav class="navbar navbar-inverse" style="border-radius: 0">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Node Chat</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/index">Chat</a></li>
+                </ul>
+                <ul class="nav navbar-nav pull-right">
+                    <li>
+
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="logedInUser">
+                            <img src="<%=user.profileImage%>" class="login-user-img">
+                            <%=user.email%> <span class="caret"></span></a>
+
+                        <ul class="dropdown-menu" style="padding: 15px;width: 100%">
+                            <li><a href="/profile">profile</a></li>
+                            <a href="/logout" class="btn btn-warning btn-block" style="margin-top: 10px" id="logOut" onclick="nodeChat.Chat.logout();"> Logout</a>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</nav>

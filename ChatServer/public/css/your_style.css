@@ -1,0 +1,143 @@
+/*
+ * It is advised not to edit the smartadmin_production.css
+ * as this will override any changes you make in the
+ * later versions of this theme.
+ *
+ * We advise that you use use this CSS to override
+ * SmartAdmin styles.
+ *
+ * Rename the stylesheet to whatever your liking so it will stay
+ * unique to you with each update of SmartAdmin.
+ */
+
+/*
+ * INDEX
+ *
+ * - HTML
+ * - BODY
+ * - CUSTOM STYLES
+ */
+
+
+/*
+.chat li:nth-child(odd) {
+    text-align: right;
+}
+
+*/
+.chat
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+span.online{
+    border: 2px solid #356e35;
+    margin-right: 10px;
+}
+.img-circle{
+    width: 40px;height: 40px
+}
+.chat-action{
+    margin-left: 5px;
+    cursor: pointer;
+}
+.chat li
+{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #B3A9A9;
+}
+
+.chat li.left .chat-body
+{
+    margin-left: 60px;
+}
+
+.chat li.right .chat-body
+{
+    margin-right: 60px;
+}
+
+
+.chat li .chat-body p
+{
+    margin: 0;
+    color: #777777;
+}
+
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+    margin-right: 5px;
+}
+
+.panel-body
+{
+    overflow-y: scroll;
+    height: 350px;
+}
+
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+
+.sender-circle{
+    border-radius: 50%;
+    font-weight: bold;
+    height: 50px;
+    padding: 16px;
+    position: relative;
+    top: 5px;
+    width: 50px;
+}
+.user-me{
+    background-color: #fd856a;
+}
+
+.user-end{
+    background-color: #64CCEC;
+}
+/*---------------------*/
+
+
+.chatWindow-open{
+    display: block;
+}
+
+.chatWindow-close{
+    display: none;
+}
+
+.clearfix.right{
+    padding: 10px;
+    margin-left: 50px;
+}
+
+.clearfix.left{
+    padding: 10px;
+    margin-right: 50px;
+}
+.unread-msg{
+    background-color: lightyellow;
+}
+
+.head-circle{
+    height: 80px; width: 80px; background-color: rgb(50, 118, 177); border-radius: 50%; font-size: 30px; padding: 19px; text-align: center; color: rgb(255, 255, 255); text-transform: uppercase;
+}
+

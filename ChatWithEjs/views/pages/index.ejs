@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+    <head>
+        <title>My Chat</title>
+        <%include ../partials/head %>
+
+    </head>
+    <body>
+
+        <%include ../partials/login_header %>
+        <audio id="audiotag1" src="sound/bigbox.mp3" preload="auto"></audio>
+        
+        <div class="container-fluid">
+            <div class="">
+                <div class="row">
+                    
+                    <div class="input-group" style="margin-top: 15px">
+                        <input id="user" type="hidden" value="<%=user.id%>"  />
+                        <span class="input-group-btn">
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-2">
+                    <div class="list-group-item active">
+                        <a href="javascript:void(0)" class="list-group-item active">
+                            <h4 class="list-group-item-heading">Online Users</h4>
+                        </a>
+                    </div>
+                    <div id="onlineUser" class="list-group list-group-item">
+
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div id="chat-windows-container" class="chat-windows row">
+
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+           
+        </div>
+        
+        <p class="text-center" id="loader" style="display: none">Loding...</p>
+        <form id="uploadForm"
+              enctype="multipart/form-data"
+              action="api/uploadChatFile"
+              method="post">
+            <!--<input type="file" id="userPhotoInput" name="userPhoto" /> -->
+            <input type="file" style="position: absolute; left: -1000px; opacity: 0.01;" id="chatImage" name="chatImageAndFile">
+        </form>
+
+        
+        <%include ../partials/logInFooter %>
+
+    </body>
+</html>
+
+
+<script>
+var focused = true;
+
+window.onfocus = window.onblur = function(e) {
+    focused = (e || event).type === "focus";
+}
+</script>

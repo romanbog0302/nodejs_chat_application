@@ -1,0 +1,48 @@
+<html>
+
+    <head>
+        <%include ../partials/head %>
+    </head>
+
+</body>
+<%include ../partials/header %>
+
+<div class="container">
+    <div class="card card-container">
+
+        <img id="profile-img" class="profile-img-card" src="img/avatar_2x.png" />
+        <p id="profile-name" class="profile-name-card"></p>
+        <form class="form-signin" method="post" action="user/signin">
+            <span id="reauth-email" class="reauth-email"></span>
+            <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required autofocus>
+            <input type="password" id="inputPassword" name="pwd" class="form-control" placeholder="Password" required>
+            <div id="remember" class="checkbox">
+                <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                </label>
+            </div>
+            <button class="btn btn-lg btn-warning btn-block btn-signin" type="submit">Sign in</button>
+        </form><!-- /form -->
+        <!--<div>
+            <a href="#" class="forgot-password">
+                Forgot the password?
+            </a>
+        </div>-->
+        <% if (locals.messages) { %>
+            <script language="javascript">
+            alert("<%= messages.msg %>");
+            </script>
+
+        <% } %>
+        <a href="sign-up" class="forgot-password">
+            Sign up new account.
+        </a>
+        
+    </div><!-- /card-container -->
+</div><!-- /container -->
+
+
+<%include ../partials/footer %>
+
+</body>
+</html>
