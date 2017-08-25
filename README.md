@@ -9,6 +9,7 @@ git clone https://github.com/qodors/NodeJS-Chat-Application.git
 Run Chat server
 
 cd ChatServer
+
 node start ChatServer.js
 
 Configure socket sever
