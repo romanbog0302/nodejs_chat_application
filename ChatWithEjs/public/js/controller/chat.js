@@ -7,9 +7,9 @@
 
 nodeChat = typeof nodeChat !== "undefined" ? nodeChat : {};
 nodeChat.Chat = {
-    socketServer: 'http://192.168.0.134:3030/',
+    socketServer: 'http://192.168.0.158:3030/',
     userData: "",
-    socket: io('http://192.168.0.134:3030/'),
+    socket: io('http://192.168.0.158:3030/'),
     _init: function () {
         //this.socket = ;
         this.initialize();
